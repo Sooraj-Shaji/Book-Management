@@ -1,0 +1,147 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #form-container, #book-list-container {
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #book-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .book-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  .book-item button {
+    background-color: #ff5733;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .book-item button:hover {
+    background-color: #f44336;
+  }
+   */
+
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #333;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .main {
+    padding: 2rem;
+  }
+  
+  .book-list {
+    margin-bottom: 2rem;
+  }
+  
+  .book {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .add-book {
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #ddd;
+  }
+  
+  .add-book input {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    width: calc(100% - 1rem);
+    box-sizing: border-box;
+  }
+  
+  .add-book button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .add-book button:hover {
+    background-color: #555;
+  }
+  
