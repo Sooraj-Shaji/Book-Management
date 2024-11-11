@@ -88,11 +88,11 @@
             const publishedYear = document.getElementById('updatePublishedYear').value;
             const description = document.getElementById('updateDescription').value;
 
-            const response = await fetch(`${apiUrl}/${id}, {
+            const response = await fetch(`${apiUrl}/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ title, author, genre, publishedYear, description })
-            }`);
+            });
 
             const data = await response.json();
             alert(data.message || 'Book updated successfully');
@@ -103,9 +103,9 @@
             e.preventDefault();
             const id = document.getElementById('deleteId').value;
 
-            const response = await fetch(`${apiUrl}/${id}, {
-                method: 'DELETE'
-            }`);
+            const response = await fetch(`${apiUrl}/${id}`, {
+                method: 'DELETE',
+            });
 
             const data = await response.json();
             alert(data.message || 'Book deleted successfully');

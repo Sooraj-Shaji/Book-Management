@@ -1,151 +1,224 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Container */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #e412a2, #aa199e);
+  color: #37860a;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #08c744;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateY(30px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff7e5f;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Button Styling */
+button {
+  padding: 15px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+button.btn {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+button.btn:hover {
+  background-color: #45a049;
+}
+
+button.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+button.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* Books List Section */
+.books-section {
+  margin-top: 40px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul li {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+ul li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+ul li:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+ul li span {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Button Styles */
+button:focus, input:focus {
+  outline: none;
+  border-color: #ff7e5f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
   }
-  
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
   }
-  
+
   h1 {
-    text-align: center;
+      font-size: 2rem;
   }
-  
-  #form-container, #book-list-container {
-    margin-bottom: 30px;
+
+  h2 {
+      font-size: 1.3rem;
   }
-  
-  form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  
-  form input, form textarea, form button {
-    padding: 10px;
-    font-size: 1rem;
-  }
-  
+
   button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+      width: 100%;
+      font-size: 1.1rem;
   }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  #book-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .book-item {
-    padding: 15px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
-  }
-  
-  .book-item button {
-    background-color: #ff5733;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .book-item button:hover {
-    background-color: #f44336;
-  }
-   */
 
-
-   * {
-    margin: 0;
-    padding: 0;
-    border:  black solid 1px;
-    box-sizing: border-box;
+  ul li {
+      font-size: 0.9rem;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .container {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  header {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: #333;
-    color: white;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-  }
-  
-  .main {
-    padding: 2rem;
-  }
-  
-  .book-list {
-    margin-bottom: 2rem;
-  }
-  
-  .book {
-    padding: 1rem;
-    background-color: white;
-    border: 1px solid #ddd;
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .add-book {
-    background-color: white;
-    padding: 2rem;
-    border: 1px solid #ddd;
-  }
-  
-  .add-book input {
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    width: calc(100% - 1rem);
-    box-sizing: border-box;
-  }
-  
-  .add-book button {
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .add-book button:hover {
-    background-color: #555;
-  }
-  
-  #edit-model{
-    display: none;
-  }
+}
